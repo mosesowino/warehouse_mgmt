@@ -1,0 +1,46 @@
+{
+  "doctype": "DocType",
+  "name": "Warehouse",
+  "module": "Warehouse Mgmt",
+  "fields": [
+    {
+      "fieldname": "warehouse_name",
+      "fieldtype": "Data",
+      "label": "Warehouse Name",
+      "reqd": 1
+    },
+    {
+      "fieldname": "parent_warehouse",
+      "fieldtype": "Link",
+      "label": "Parent Warehouse",
+      "options": "Warehouse",
+      "description": "Hierarchical parent warehouse (leave blank for top-level)"
+    },
+    {
+      "fieldname": "is_group",
+      "fieldtype": "Check",
+      "label": "Is Group Warehouse",
+      "description": "Check if this is a logical group (not a physical location)"
+    },
+    {
+      "fieldname": "warehouse_type",
+      "fieldtype": "Select",
+      "label": "Type",
+      "options": "Storage\nDispatch\nReceiving",
+      "default": "Storage"
+    }
+  ],
+  "is_tree": 1,
+  "autoname": "field:warehouse_name",
+  "permissions": [
+    {
+      "role": "System Manager",
+      "permlevel": 0,
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "submit": 1,
+      "cancel": 1,
+      "delete": 1
+    }]
+}

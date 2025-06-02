@@ -1,0 +1,28 @@
+{
+  "name": "Stock Balance",
+  "report_name": "Stock Balance",
+  "doctype": "Report",
+  "is_standard": "Yes",
+  "report_type": "Script Report",
+  "ref_doctype": "Stock Ledger Entry",
+  "filters": [
+    {
+      "fieldname": "as_on_date",
+      "label": "As On Date",
+      "fieldtype": "Date",
+      "default": "Today",
+      "reqd": 1
+    }
+  ],
+   "permissions": [
+    {
+      "role": "System Manager",
+      "permlevel": 0,
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "submit": 1,
+      "cancel": 1,
+      "delete": 1
+    }]
+}

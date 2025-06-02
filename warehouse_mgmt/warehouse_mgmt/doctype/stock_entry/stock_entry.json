@@ -1,0 +1,51 @@
+{
+  "doctype": "DocType",
+  "name": "Stock Entry",
+  "module": "Warehouse Mgmt",
+  "fields": [
+    {
+      "fieldname": "naming_series",
+      "fieldtype": "Select",
+      "label": "Naming Series",
+      "options": "STE-.YYYY.-",
+      "default": "STE-.YYYY.-",
+      "reqd": 1
+    },
+    {
+      "fieldname": "stock_entry_type",
+      "fieldtype": "Select",
+      "label": "Stock Entry Type",
+      "options": "Receipt\nConsume\nTransfer",
+      "reqd": 1
+    },
+    {
+      "fieldname": "posting_date",
+      "fieldtype": "Date",
+      "label": "Posting Date",
+      "reqd": 1
+    },
+    {
+      "fieldname": "items",
+      "fieldtype": "Table",
+      "label": "Items",
+      "options": "Stock Entry Item",
+      "reqd": 1
+    }
+  ],
+  "autoname": "naming_series:STE-.YYYY.-",
+  "istable": 0,
+  "editable_grid": 0,
+  "is_tree": 0,
+  "permissions": [
+    {
+      "role": "System Manager",
+      "permlevel": 0,
+      "create": 1,
+      "read": 1,
+      "write": 1,
+      "submit": 1,
+      "cancel": 1,
+      "delete": 1
+    }
+  ]
+}

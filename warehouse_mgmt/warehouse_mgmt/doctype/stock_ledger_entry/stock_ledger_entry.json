@@ -1,0 +1,63 @@
+{
+  "doctype": "DocType",
+  "name": "Stock Ledger Entry",
+  "module": "Warehouse Mgmt",
+  "autoname": "autoincrement",
+  "istable": 0,
+  "editable_grid": 0,
+  "is_tree": 0,
+  "fields": [
+    {
+      "fieldname": "item",
+      "fieldtype": "Link",
+      "label": "Item",
+      "options": "Item",
+      "read_only": 1
+    },
+    {
+      "fieldname": "warehouse",
+      "fieldtype": "Link",
+      "label": "Warehouse",
+      "options": "Warehouse",
+      "read_only": 1
+    },
+    {
+      "fieldname": "posting_date",
+      "fieldtype": "Date",
+      "label": "Posting Date",
+      "read_only": 1
+    },
+    {
+      "fieldname": "qty_change",
+      "fieldtype": "Float",
+      "label": "Quantity Change",
+      "read_only": 1,
+      "description": "Positive = Stock In, Negative = Stock Out"
+    },
+    {
+      "fieldname": "valuation_rate",
+      "fieldtype": "Currency",
+      "label": "Valuation Rate",
+      "read_only": 1
+    },
+    {
+      "fieldname": "stock_value_change",
+      "fieldtype": "Currency",
+      "label": "Stock Value Change",
+      "read_only": 1,
+      "description": "Automatically computed = qty_change * valuation_rate"
+    }
+  ],
+  "permissions": [
+    {
+      "role": "System Manager",
+      "permlevel": 0,
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "submit": 1,
+      "cancel": 1,
+      "delete": 1
+    }
+  ]
+}

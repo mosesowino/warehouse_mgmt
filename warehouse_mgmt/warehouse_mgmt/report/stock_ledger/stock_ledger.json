@@ -1,0 +1,39 @@
+{
+  "doctype": "Report",
+  "name": "Stock Ledger",
+  "report_name": "Stock Ledger",
+  "ref_doctype": "Stock Ledger Entry",
+  "report_type": "Script Report",
+  "is_query_report": false,
+  "is_standard": "Yes",
+  "module": "Warehouse Mgmt",
+  "add_total_row": 1,
+  "filters": [
+    {
+      "fieldname": "item",
+      "label": "Item",
+      "fieldtype": "Link",
+      "options": "Item"
+    },
+    {
+      "fieldname": "warehouse",
+      "label": "Warehouse",
+      "fieldtype": "Link",
+      "options": "Warehouse"
+    },
+    {
+      "fieldname": "from_date",
+      "label": "From Date",
+      "fieldtype": "Date",
+      "default": "Today",
+      "reqd": 1
+    },
+    {
+      "fieldname": "to_date",
+      "label": "To Date",
+      "fieldtype": "Date",
+      "default": "Today",
+      "reqd": 1
+    }
+  ]
+}
